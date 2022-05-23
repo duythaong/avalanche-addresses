@@ -165,11 +165,11 @@ function Account() {
         🤖
       </span>
       <span>
-        {account === null
-          ? '-'
-          : account
-          ? `${account.substring(0, 6)}...${account.substring(account.length - 4)}`
-          : ''}
+        {
+          account === null
+            ? '-'
+            : account
+        }
       </span>
     </>
   )
@@ -369,6 +369,8 @@ function App() {
             }}
             onClick={() => {
               deactivate()
+              setAddressX('')
+              setAddressP('')
             }}
           >
             Disconnect
